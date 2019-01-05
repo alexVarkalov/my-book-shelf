@@ -1,3 +1,9 @@
 from django.contrib import admin
-
-# Register your models here.
+from .proxy import (
+    AuthorProxy, AuthorAdmin,
+    BookProxy, BookAdmin,
+    BookShelfProxy, BookShelfAdmin,
+)
+admin.site.register(AuthorProxy, AuthorAdmin)
+admin.site.register(BookProxy, BookAdmin)
+admin.site.register(BookShelfProxy, BookShelfAdmin)

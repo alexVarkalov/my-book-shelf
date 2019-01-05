@@ -10,3 +10,6 @@ class Author(Base):
         max_length=255,
         null=False,
     )
+
+    def __str__(self):
+        return '{} {}'.format(self.firstname, self.lastname)

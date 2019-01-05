@@ -12,3 +12,6 @@ class Book(Base):
         related_name='books', 
         on_delete=models.CASCADE,
     )
+
+    def __str__(self):
+        return '{} of {} {}'.format(self.title, self.author.firstname, self.author.lastname)
